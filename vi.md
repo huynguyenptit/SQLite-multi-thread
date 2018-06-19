@@ -9,10 +9,10 @@ Hãy cùng tìm hiểu về ưu nhược điểm của SQLite.
 ### Ưu điểm
 
 * SQLite được viết hoàn toàn bằng C. Vì vậy nó có thể truy cập vào ổ đĩa hay bộ nhớ CSDL một cách nhanh nhất và xử lí dữ liệu. Hãy nghĩ như bạn đang sử dụng ổ SSD.
-* SQLite hỗ trợ trong bộ nhớ. Trong bộ nhớ SQLite nhanh gấp 2 lần. Nếu bạn hiểu vấn đề phân trang. Nó đủ nhanh để làm điều đó
+* SQLite hỗ trợ bộ nhớ trong. Bbộ nhớ trong SQLite nhanh gấp 2 lần. Nếu bạn hiểu vấn đề phân trang. Nó đủ nhanh để làm điều đó
 * SQLite chạy đơn luồng. Vì vậy nguy cơ hỏng dữ liệu gần như là thấp nhất.
 * CSDL SQLite trong 1 file độc lập. Vì thế chúng ta có thể di chuyển và truy cập nó hết sức đơn giản trên các nền tảng khác.
-* SQLite is 0 administration for end user. 
+* SQLite là một hệ quản trị cho người dùng đầu cuối. 
 * Lướt qua về nền tảng, SQLite có thể được sử dụng trên tất cả các nền tảng OS.
 * Nó là mã nguồn mở !!!
 * Vân vân ………..
@@ -34,7 +34,7 @@ Bây giờ tôi sẽ thử một mẹo nhỏ để ghi hành đông trong gần 
 
 #### Đây là bước chính BƯỚC 1.7
 
-Ban biết đấy, index B TREE là siêu nhanh. Và việc bạn GHI hành sẽ dựa theo mỗi ROWID cái mà đã được đánh index theo mặc định.
+Ban biết đấy, index B TREE là siêu nhanh. Và hành động GHI của bạn sẽ thực hiện theo ID từng dòng dòng đã được đánh index theo mặc định.
 
 Ví dụ:
 
