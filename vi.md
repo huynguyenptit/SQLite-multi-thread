@@ -2,7 +2,7 @@
 
 Các bạn thân mến,
 
-Như bạn biết SQLite là cơ sở dữ liệu đơn luồng và mặc định được nhúng trên hệ điều hành Linux OS. Có rất nhiều các cuộc nghiên cứu về việc sử dụng SQLite để lưu trữ dữ liệu. Cũng có rất nhiều những nghiên cứu về việc truy cập CSDL SQLite đa luồng. Tôi sẽ chia sẻ một nghiên cứu nhỏ về việc làm sao để có được đa luồng trong CSDL SQLite.
+Như bạn biết SQLite là cơ sở dữ liệu đơn luồng và mặc định được nhúng trên hệ điều hành Linux OS. Có rất nhiều các cuộc nghiên cứu về việc sử dụng SQLite để lưu trữ dữ liệu. Cũng có rất nhiều những nghiên cứu về việc truy cập CSDL SQLite cho hoạt động ghi đa luồng. Tôi sẽ chia sẻ một nghiên cứu nhỏ về việc làm sao để có được hoạt động đa luồng trong CSDL SQLite.
 
 Hãy cùng tìm hiểu về ưu nhược điểm của SQLite.
 
@@ -23,12 +23,12 @@ Hãy cùng tìm hiểu về ưu nhược điểm của SQLite.
 * Không có tầng yêu cầu xác thực.
 
 ####Tạo đa luồng ghi trong gần như một thời điểm.
-Bây giờ tôi sẽ thử một mẹo nhỏ để ghi hành đông trong gần như 1 thời điểm.
+Bây giờ tôi sẽ thử một mẹo nhỏ để thực hiện việc ghi cùng một lúc
 #### Chú ý: SQLite không cho phép bạn hoàn thành ROW LEVER LOCK. Vì thế không cần phí thời gian để tìm kiếm nó.
 
 
 
-Đương nhiên nó có thể tác động tới hiệu suất nếu bạn ghi hành động trên một phần của bảng lớn. Nhưng luồng thứ 2 sẽ không đợi quá lâu đến khi cái thứ nhất xong.
+Đương nhiên nó có thể tác động tới hiệu suất nếu bạn thực hiện thao tác ghi trên phần lớn của bảng. Nhưng luồng thứ 2 sẽ không đợi quá lâu đến khi cái thứ nhất xong.
 
 
 
